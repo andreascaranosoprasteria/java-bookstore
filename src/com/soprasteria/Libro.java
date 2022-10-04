@@ -11,8 +11,8 @@ public class Libro {
 		String author;						//autore del libro
 		int availability;					//disponibilità di copie del libro
 		boolean isAvailable;				//il libro è disponibile?
-		float price;						//prezzo del libro
-		
+		float price = 30.00f;						//prezzo del libro
+		float sale;
 		//acquisizione dei dati
 		System.out.print("Inserisci ISBN del libro: -->");
 		isbn = sc.nextLine();
@@ -23,6 +23,8 @@ public class Libro {
 		System.out.print("\n Inserisci disponibilità: -->");
 		availability = sc.nextInt();
 		
+		sale = (price* 20) /100 ; //assegnazione sconto.
+		price -= sale;
 		if(availability > 0) isAvailable = true;
 		else isAvailable = false;
 		
